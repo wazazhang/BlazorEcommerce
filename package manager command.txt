@@ -1,0 +1,5 @@
+PM> cd .\BlazorEcommerce
+PM> cd server
+PM> dir
+PM> dotnet ef migrations add CreateInitial
+PM> dotnet ef database update

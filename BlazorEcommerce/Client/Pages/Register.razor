@@ -11,6 +11,16 @@
         <label for="email">Email</label>
         <InputText id="email" @bind-Value="user.Email" class="form-control" />
         <ValidationMessage For="@(() => user.Email)" />
+    </div>   
+    <div class="mb-3">
+        <label for="walletaddress">Wallet Address</label>
+        <InputText id="walletaddress" @bind-Value="user.WalletAddress" class="form-control" />
+        <ValidationMessage For="@(() => user.WalletAddress)" />
+    </div>  
+    <div class="mb-3">
+        <label for="nickname">Nick Name</label>
+        <InputText id="nickname" @bind-Value="user.NickName" class="form-control" />
+        <ValidationMessage For="@(() => user.NickName)" />
     </div>
     <div class="mb-3">
         <label for="password">Password</label>
@@ -22,6 +32,7 @@
         <InputText id="confirmPassword" @bind-Value="user.ConfirmPassword" class="form-control" type="password" />
         <ValidationMessage For="@(() => user.ConfirmPassword)" />
     </div>
+    <button id="connectWallet" @onclick="connWallet" class="btn btn-primary">Connect Wallet</button>
     <button type="submit" class="btn btn-primary">Register</button>
     <div class="@messageCssClass">
         <span>@message</span>
@@ -42,5 +53,10 @@
             messageCssClass = "text-success";
         else
             messageCssClass = "text-danger";
+    }
+
+    async Task connWallet()
+    {
+        
     }
 }
